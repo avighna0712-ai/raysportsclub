@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ray Sports Club | Admin Panel</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Login -->
+
+    <div id="loginBox" class="loginBox">
+
+        <h1>Ray Sports Club</h1>
+
+        <h2>Admin Login</h2>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password">
+
+        <button id="loginBtn">
+
+            Login
+
+        </button>
+
+        <p id="loginMessage"></p>
+
+    </div>
+
+
+
+    <!-- Dashboard -->
+
+    <div
+        id="dashboard"
+        class="dashboard"
+        style="display:none;">
+
+        <h1>Ray Sports Club Admin</h1>
+
+        <hr>
+
+        <br>
+
+        <div class="uploadBox">
+
+            <h2>Upload Photo or Video</h2>
+
+            <input
+                type="file"
+                id="mediaFile"
+                accept="image/*,video/*">
+
+            <button id="uploadBtn">
+
+                Upload
+
+            </button>
+
+        </div>
+
+        <br>
+
+        <hr>
+
+        <br>
+
+        <h2>Uploaded Gallery</h2>
+
+        <div id="adminGallery">
+
+        </div>
+
+        <br>
+
+        <button id="logoutBtn">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+
+</html>

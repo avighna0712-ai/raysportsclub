@@ -1,0 +1,271 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+
+    background:#f4f6f9;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.container{
+
+    width:95%;
+
+    max-width:1200px;
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+/* ========================= */
+/* LOGIN */
+/* ========================= */
+
+.loginBox{
+
+    max-width:420px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.loginBox h1{
+
+    color:#ff6600;
+
+    margin-bottom:10px;
+
+}
+
+.loginBox h2{
+
+    margin-bottom:25px;
+
+}
+
+.loginBox input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin:10px 0;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.loginBox button{
+
+    width:100%;
+
+}
+
+
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+button{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ff6600;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#e45700;
+
+}
+
+
+
+/* ========================= */
+/* DASHBOARD */
+/* ========================= */
+
+.dashboard{
+
+    text-align:center;
+
+}
+
+.dashboard h1{
+
+    color:#ff6600;
+
+}
+
+.uploadBox{
+
+    margin-top:25px;
+
+}
+
+#mediaFile{
+
+    margin:20px 0;
+
+}
+
+
+
+/* ========================= */
+/* GALLERY */
+/* ========================= */
+
+#adminGallery{
+
+    margin-top:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.imageCard{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.imageCard:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.imageCard img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+.imageCard video{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+.imageCard p{
+
+    padding:12px;
+
+    font-weight:600;
+
+    word-break:break-word;
+
+}
+
+.imageCard button{
+
+    width:90%;
+
+    margin:15px;
+
+    background:#d32f2f;
+
+}
+
+.imageCard button:hover{
+
+    background:#b71c1c;
+
+}
+
+
+
+/* ========================= */
+/* LOGIN MESSAGE */
+/* ========================= */
+
+#loginMessage{
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.container{
+
+padding:20px;
+
+}
+
+.imageCard img,
+.imageCard video{
+
+height:200px;
+
+}
+
+}
