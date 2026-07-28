@@ -400,7 +400,7 @@ nullsFirst:false
 
                 const { error: storageError } =
                     await supabase.storage
-                        .from(BUCKET_NAME)
+                        .from(club_media)
                         .remove([storagePath]);
 
                 if (storageError)
