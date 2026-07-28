@@ -29,7 +29,7 @@ const supabase = createClient(
 // STORAGE BUCKET
 // =====================================
 
-export const BUCKET_NAME = "club-media";
+export const BUCKET_NAME = "club_media";
 
 // =====================================
 // EXPORT CLIENT
