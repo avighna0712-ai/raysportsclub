@@ -196,7 +196,7 @@ uploadBtn.addEventListener("click", async () => {
 
         const { error: uploadError } =
             await supabase.storage
-                .from(BUCKET_NAME)
+                .from(club_media)
                 .upload(filePath, file);
 
         if (uploadError)
@@ -209,7 +209,7 @@ uploadBtn.addEventListener("click", async () => {
         const {
             data: publicData
         } = supabase.storage
-            .from(BUCKET_NAME)
+            .from(club_media)
             .getPublicUrl(filePath);
 
         const publicURL =
