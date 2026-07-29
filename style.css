@@ -1006,3 +1006,52 @@ color:#8d3d00;
 grid-column:1/-1;
 
 }
+/* ===========================
+   PROJECT TEAM
+=========================== */
+
+.credits{
+    margin-top:40px;
+    text-align:center;
+    padding:25px;
+    background:#f8f8f8;
+    border-radius:12px;
+}
+
+.credits h2{
+    color:#b22222;
+    margin-bottom:18px;
+}
+
+.credits p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+.credits ul{
+    list-style:none;
+    padding:0;
+    margin:15px 0;
+}
+
+.credits li{
+    margin:8px 0;
+    font-size:17px;
+}
+
+.website-credit,
+.student-credit{
+    text-align:center;
+    margin-top:15px;
+    font-size:16px;
+}
+
+.student-credit a{
+    color:#0066cc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.student-credit a:hover{
+    text-decoration:underline;
+}
