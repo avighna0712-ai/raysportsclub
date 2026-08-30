@@ -2357,3 +2357,18 @@ a:focus-visible{
         transition-duration:.01ms !important;
     }
 }
+/* =========================================================
+   EQUAL WEBSITE MAKER NAME WEIGHT
+========================================================= */
+
+.credits p strong{
+    font-weight:900;
+}
+
+.credits p{
+    font-weight:900;
+}
+
+.credits li{
+    font-weight:900;
+}
