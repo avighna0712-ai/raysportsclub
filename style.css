@@ -2385,3 +2385,22 @@ a:focus-visible{
     font-size:18px !important;
     font-weight:900 !important;
 }
+/* ================= WEBSITE MAKERS ================= */
+
+.credits p,
+.credits li {
+    font-size:22px !important;
+    font-weight:900 !important;
+    color:white !important;
+    line-height:1.6;
+}
+
+.credits p strong {
+    font-weight:900 !important;
+}
+
+.credits ul {
+    list-style:none;
+    padding:0;
+    margin:15px 0;
+}
