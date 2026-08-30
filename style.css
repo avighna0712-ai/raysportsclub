@@ -2372,3 +2372,16 @@ a:focus-visible{
 .credits li{
     font-weight:900;
 }
+.credits p{
+    font-size:22px !important;
+    font-weight:900 !important;
+}
+
+.credits p strong{
+    font-weight:900 !important;
+}
+
+.credits li{
+    font-size:18px !important;
+    font-weight:900 !important;
+}
