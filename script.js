@@ -160,3 +160,15 @@ setInterval(()=>{
 loadGallery();
 
 },30000);
+const enquireBtn = document.getElementById("enquireBtn");
+const enquiryForm = document.getElementById("enquiryForm");
+
+if (enquireBtn && enquiryForm) {
+    enquireBtn.addEventListener("click", () => {
+        enquiryForm.style.display = "block";
+        enquiryForm.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    });
+}
