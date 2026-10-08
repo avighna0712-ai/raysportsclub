@@ -442,3 +442,73 @@ nullsFirst:false
     });
 
 }
+// ======================================
+// LOAD ENQUIRIES
+// ======================================
+
+async function loadEnquiries() {
+
+    const enquiriesList =
+        document.getElementById("enquiriesList");
+
+    if (!enquiriesList) return;
+
+    enquiriesList.innerHTML =
+        "<p>Loading enquiries...</p>";
+
+    const { data, error } = await supabase
+        .from("enquiries")
+        .select("*")
+        .order("created_at", {
+            ascending: false
+        });
+
+    if (error) {
+
+        console.error(error);
+
+        enquiriesList.innerHTML =
+            "<p>Unable to load enquiries.</p>";
+
+        return;
+    }
+
+    if (!data || data.length === 0) {
+
+        enquiriesList.innerHTML =
+            "<p>No enquiries yet.</p>";
+
+        return;
+    }
+
+    enquiriesList.innerHTML = "";
+
+    data.forEach((item) => {
+
+        const card = document.createElement("div");
+
+        card.className = "enquiryCard";
+
+        card.innerHTML = `
+            <h3>${item.name}</h3>
+
+            <p>📞 ${item.phone}</p>
+
+            <p>🎂 Age: ${item.age || "Not provided"}</p>
+
+            <p>🏆 Sport: ${item.sport || "Not specified"}</p>
+
+            <p>💬 ${item.message || "No message"}</p>
+
+            <a
+                href="tel:${item.phone}"
+                class="callEnquiry"
+            >
+                📞 Call
+            </a>
+        `;
+
+        enquiriesList.appendChild(card);
+
+    });
+}
