@@ -172,3 +172,73 @@ if (enquireBtn && enquiryForm) {
         });
     });
 }
+// ================================
+// ENQUIRY SUBMISSION
+// ================================
+
+const submitEnquiry = document.getElementById("submitEnquiry");
+
+if (submitEnquiry) {
+
+    submitEnquiry.addEventListener("click", async () => {
+
+        const name =
+            document.getElementById("enquiryName").value.trim();
+
+        const phone =
+            document.getElementById("enquiryPhone").value.trim();
+
+        const age =
+            document.getElementById("enquiryAge").value;
+
+        const sport =
+            document.getElementById("enquirySport").value;
+
+        const message =
+            document.getElementById("enquiryMessage").value.trim();
+
+        if (!name || !phone) {
+            alert("Please enter your name and phone number.");
+            return;
+        }
+
+        submitEnquiry.disabled = true;
+        submitEnquiry.textContent = "Submitting...";
+
+        try {
+
+            const { error } = await supabase
+                .from("enquiries")
+                .insert([{
+                    name: name,
+                    phone: phone,
+                    age: age ? Number(age) : null,
+                    sport: sport || null,
+                    message: message || null
+                }]);
+
+            if (error) {
+                throw error;
+            }
+
+            alert("Enquiry submitted successfully! Sir will contact you soon.");
+
+            document.getElementById("enquiryName").value = "";
+            document.getElementById("enquiryPhone").value = "";
+            document.getElementById("enquiryAge").value = "";
+            document.getElementById("enquirySport").value = "";
+            document.getElementById("enquiryMessage").value = "";
+
+        } catch (error) {
+
+            console.error(error);
+            alert("Unable to submit enquiry. Please try again.");
+
+        }
+
+        submitEnquiry.disabled = false;
+        submitEnquiry.textContent = "Submit Enquiry";
+
+    });
+
+}
